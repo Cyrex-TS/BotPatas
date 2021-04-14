@@ -10,7 +10,7 @@ pkg install nodejs
 
 pkg install npm
 
-git clone https://github.com/Cyrex-TS/MrPatas
+git clone https://github.com/Cyrex-TS/BotPatas
 
 cd SrPatas
 
