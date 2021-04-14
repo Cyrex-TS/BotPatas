@@ -634,7 +634,7 @@ async function starts() {
               data = await fetchJson(`https://tobz-api.herokuapp.com/api/kbbi?kata=${tels}&apikey=BotWeA`)
               if (data.error) return reply(data.error)
               hasil = `${data.result}`
-              reply(hasil)0
+              reply(hasil)
               break
 				case 'joox':
 			tels = body.slice(6)
