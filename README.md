@@ -1,4 +1,4 @@
-# Sr. Patas
+# YAMA-BOT
 
 pkg install git
 
@@ -10,9 +10,9 @@ pkg install nodejs
 
 pkg install npm
 
-git clone https://github.com/Cyrex-TS/BotPatas
+git clone https://github.com/Cyrex-TS/yamabot
 
-cd SrPatas
+cd yamabot
 
 bash install.sh
 
