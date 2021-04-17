@@ -1,6 +1,6 @@
 {
-  "name": "shanbot",
-  "version": "0.0.2",
+  "name": "yamabot",
+  "version": "1.0.2",
   "description": "Only termux",
   "main": "index.js",
   "directories": {
@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "Shan",
+  "author": "Cyrex",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",
@@ -40,10 +40,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanduy/ShanBot.git"
+    "url": "git+https://github.com/Cyrex-TS/yamabot.git"
   },
   "bugs": {
-    "url": "https://github.com/shanduy/ShanBot.git"
+    "url": "https://github.com/Cyrex-TS/yamabot.git"
   },
-  "homepage": "https://github.com/shanduy/ShanBot#readme"
+  "homepage": "https://github.com/Cyrex-TS/yamabot#readme"
 }
