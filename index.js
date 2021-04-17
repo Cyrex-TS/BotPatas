@@ -67,7 +67,7 @@ const { othermenu } require('./database/menu/othermenu')*/
 /******LOAD OF VCARD INPUT******/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:10.0\n' 
-            + 'FN:Sr.Patas\n' // Nombre
+            + 'FN:YAMA-BOT;\n' // Nombre
             + 'ORG:Cyrex;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=5491122508064:+5491122508064\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
@@ -187,7 +187,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Mi loco @${num.split('@')[0]}\nTodo bien pa? Bienvenido *${mdata.subject}*`
+				teks = `Qué onda @${num.split('@')[0]}\nTodo bien? Llegaste a *${mdata.subject}* \n disfruta`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
@@ -197,7 +197,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Llevate essssta @${num.split('@')[0]}👋`
+				teks = `Llevate essssta y trae a tu hermana @${num.split('@')[0]}👋`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -251,7 +251,7 @@ async function starts() {
 					ownerB: '[❗] Este comando solo lo usa el SrPatas! ❌',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo! ❌',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador! ❌',
-                                        daftarB: `── 「REGISTRATE CARA DE PINGO」\n\nHOLA CHINCHULIN!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Cyrex
+                                        daftarB: `── 「REGISTRATE CARA DE PINGO」\n\nHOLA CHINCHULIN!\n\nNo estas registrado en mi base de datos 😳\n\n Para registrarte usa el comando y tu nombre \n\nComando : ${prefix}daftar \nEjemplo : ${prefix}daftar Cyrex
 `,
 				}
 			}
@@ -259,7 +259,7 @@ async function starts() {
         		const bisakah = ['Bisa','Tidak Bisa']
 		        const kapankah = ['Hari Lagi','Minggu Lagi','Bulan Lagi','Tahun Lagi']
 			const botNumber = client.user.jid
-			const ownerNumber = ["5491122508064@s.whatsapp.net"] // replace this with your number
+			const ownerNumber = ["541122508064@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -277,7 +277,7 @@ async function starts() {
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
-                        const NomerOwner = '5491122508064@s.whatsapp.net'
+                        const NomerOwner = '541122508064@s.whatsapp.net'
                         /******ApiKey Input******/
                         const BarBarKey = 'TU CLAVE API'
                         /******End of ApiKey Input******/
@@ -380,7 +380,7 @@ async function starts() {
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
-                                case 'randomhentai':
+                                case 'randomhentai5':
                                         gatauda = body.slice(6)
                                         if (!isUser) return reply(mess.only.daftarB)
                                         reply(mess.wait)
@@ -388,7 +388,7 @@ async function starts() {
                                         buffer = await getBuffer(anu.result)
                                         client.sendMessage(from, buffer, image, {quoted: mek})
                                         break
-                                case 'loli':
+                                case 'loli5':
                                         gatauda = body.slice(6)
                                         if (!isUser) return reply(mess.only.daftarB)
                                         reply(mess.wait)
@@ -448,7 +448,7 @@ async function starts() {
                 break
               case 'owner':
                 case 'creator':
-                  client.sendMessage(from, {displayname: "Manton", vcard: vcard}, MessageType.contact, { quoted: mek})
+                  client.sendMessage(from, {displayname: "Cyrex", vcard: vcard}, MessageType.contact, { quoted: mek})
                client.sendMessage(from, 'Este es el número de mi propietario, guardalo pero no rompas los huevos',MessageType.text, { quoted: mek} )
                 break
 	case 'hidetag':
@@ -798,7 +798,7 @@ async function starts() {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 SR. PATAS 〙', members_id, true)
+					mentions('╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 YAMA-BOT 〙', members_id, true)
 					break
                 case 'tagall2':
 				client.updatePresence(from, Presence.composing) 
@@ -811,7 +811,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 SR. PATAS 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 YAMA-BOT 〙', text, {quoted: mek})
 					break
                 case 'tagall3':
 				client.updatePresence(from, Presence.composing) 
@@ -824,7 +824,7 @@ async function starts() {
 						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 SR. PATAS 〙', text, {detectLinks: false, quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 YAMA-BOT 〙', text, {detectLinks: false, quoted: mek})
 					break
                         case 'tagall4':
 				client.updatePresence(from, Presence.composing) 
@@ -837,7 +837,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@c.us\n`
 						members_id.push(mem.jid)
 					}
-					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 SR. PATAS 〙', text, {quoted: mek})
+					client.sendMessage(from, '╔══✪〘 Mencionar A Todos 〙✪══\n╠➥'+teks+'╚═〘 YAMA-BOT 〙', text, {quoted: mek})
 					break
                 case 'tagall5':
 				client.updatePresence(from, Presence.composing) 
@@ -850,7 +850,7 @@ async function starts() {
 						teks += `╠➥ ${mem.jid.split('@')[0]}@s.whatsapp.net\n`
 						members_id.push(mem.jid)
 					}
-					reply('╔══✪〘 Mencionando A Todos 〙✪══\n╠➥'+teks+'╚═〘 SR. PATAS 〙')
+					reply('╔══✪〘 Mencionando A Todos 〙✪══\n╠➥'+teks+'╚═〘 YAMA-BOT 〙')
 					break
 				case 'send':
 					var pc = body.slice(6)
@@ -1124,7 +1124,7 @@ async function starts() {
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					var nomor = mek.participant
 					const close = {
-					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nagora *solo administradores* pueden enviar mensajes`,
+					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\n ahora *solo administradores* pueden enviar mensajes`,
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
@@ -1137,7 +1137,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					open = {
-					text: `Grupo abierto por administrador @${sender.split("@")[0]}\nagora *todos los participantes* pueden enviar mensajes`,
+					text: `Grupo abierto por administrador @${sender.split("@")[0]}\n ahora *todos los participantes* pueden enviar mensajes`,
 					contextInfo: { mentionedJid: [sender] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
@@ -1202,7 +1202,7 @@ async function starts() {
 				case 'animehug':
 					ranp = getRandom('.gif')
 					rano = getRandom('.webp')
-					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug&apikey=BotWeA', {method: 'get'})
+					anu = await fetchJson('https://tobz-api.herokuapp.com/api/hug?apikey=APIKEYLU', {method: 'get'})
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (anu.error) return reply(anu.error)
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
@@ -1380,6 +1380,7 @@ async function starts() {
 					const hob =['Una buena paja mi loco para ir a dormir']
 					const by = hob[Math.floor(Math.random() * hob.length)]
 					client.sendMessage(from, 'Pregunta : *'+hobby+'*\n\nRespuesta : '+ by, text, { quoted: mek })
+					}
 					break
                                 case 'nsfwneko':
 				    try{
@@ -1440,6 +1441,7 @@ async function starts() {
 					gatauda = body.slice(8)					
 					anu = await fetchJson(`https://arugaz.my.id/api/randomquotes`, {method: 'get'})
 					reply(anu.quotes)
+					}
 					break		
 			    case 'waifu':
 					gatauda = body.slice(7)
@@ -1559,7 +1561,8 @@ async function starts() {
                                         if (anu.error) return reply(anu.error)
                                         hasil = `*Profundidad* : ${anu.kedalaman}\n*Coordenada* : ${anu.koordinat}\n*Locacion* : ${anu.lokasi}\n*Magnitud* : ${anu.magnitude}\n*Map* : ${anu.map}\n*Potensi* : ${anu.potensi}\n*Waktu* : ${anu.waktu}`
                                         client.sendMessage(from, hasil, text, {quoted:mek})
-                                        break
+                                        }
+					break
                                 case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1571,11 +1574,11 @@ async function starts() {
                                                 console.log(`*Error* :`, color(e,'red'))
                                                 reply('❌ *ERROR* ❌')
                                         }
-										break
-										case 'randomhentaio': 
+					break
+					case 'hentai': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
+							res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=APIKEYLU`, {method: 'get'})
 							buffer = await getBuffer(res.result)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Otaku que se esperaba'})
 						} catch (e) {
@@ -1583,10 +1586,10 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwloli':
+					case 'loli':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/Lolirefugees`, {method: 'get'})
+							res = await fetchJson(`https://tobz-api.herokuapp.com/api/randomloli?apikey=APIKEYLU`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Alto pedofilo socio'})
 						} catch (e) {
@@ -1594,7 +1597,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwboobs': 
+					case 'tetas': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/boobs`, {method: 'get'})
@@ -1605,7 +1608,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwblowjob':
+					case 'petardo':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://tobz-api.herokuapp.com/api/blowjob`, {method: 'get'})
@@ -1627,7 +1630,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'trap':
+					case 'trapito':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://api.computerfreaker.cf/v1/trap`, {method: 'get'})
@@ -1637,11 +1640,11 @@ async function starts() {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-					break
-				case 'nsfwass':
+					       break
+				     	case 'culos':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`'https://meme-api.herokuapp.com/gimme/greatass`, {method: 'get'})
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/greatass`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
@@ -1649,7 +1652,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwsideboobs':
+					case 'tetas2':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/sideboobs`, {method: 'get'})
@@ -1660,7 +1663,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 					    break
-					case 'nsfwahegao':
+					case 'ahegao':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/ahegao`, {method: 'get'})
@@ -1671,10 +1674,10 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwthighs':
+					case 'muslos':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/thighss`, {method: 'get'})
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/thighs`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Buenos muslos?'})
 						} catch (e) {
@@ -1682,7 +1685,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwfeets':
+					case 'patas':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/verifiedfeet`, {method: 'get'})
@@ -1693,12 +1696,12 @@ async function starts() {
 							reply('❌ *ERROR* ❌') 
 						}
 						break
-					case 'nsfwarmpits':
+					case 'nudes':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/FleshyArmpits`, {method: 'get'})
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/Nudes`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'A?'})
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Saca la mano de ahí pajin..'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
